@@ -1,0 +1,17 @@
+piVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: my-python-app
+  labels:
+    app: my-python-app
+spec:
+  template:
+    metadata:
+      labels:
+        app: my-python-app
+    spec:
+      containers:
+      - name: my-python-app
+        image: my-python-app
+        ports:
+        - containerPort: 5000
